@@ -5704,7 +5704,7 @@ blockquote.pullquote.right {
   content: '';
 }
 [data-theme='dark'] #web_bg {
-  background-image: url("/img/wallhaven-9doozw.jpg");
+  background-image: url("https://cdn.jsdelivr.net/gh/Afei-Yolo/Picgodemo/img/wallhaven-9doozw.jpg");
   background-size: 100% 100%;
   background-size: cover;
   background-repeat: no-repeat center;

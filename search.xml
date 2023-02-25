@@ -4,51 +4,25 @@
   
     
     <entry>
-      <title>第一篇博客</title>
-      <link href="/2023/02/25/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-      <url>/2023/02/25/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+      <title>github+hexo部署博客</title>
+      <link href="/2023/02/25/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2023/02/25/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</url>
       
-        <content type="html"><![CDATA[<h4 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h4>]]></content>
+        <content type="html"><![CDATA[<h1 id="github-hexo部署博客"><a href="#github-hexo部署博客" class="headerlink" title="github+hexo部署博客"></a>github+hexo部署博客</h1><h2 id="1-部署前准备"><a href="#1-部署前准备" class="headerlink" title="1. 部署前准备"></a>1. 部署前准备</h2><h3 id="1-1-下载-git-Git-Downloading-Package-镜像下载"><a href="#1-1-下载-git-Git-Downloading-Package-镜像下载" class="headerlink" title="1.1 下载 git  Git - Downloading Package 镜像下载"></a>1.1 下载 git  <a href="https://link.zhihu.com/?target=https://git-scm.com/download/win">Git - Downloading Package</a> <a href="https://npm.taobao.org/mirrors/git-for-windows/">镜像下载</a></h3><h3 id="1-2-下载-node-js-Download-Node-js"><a href="#1-2-下载-node-js-Download-Node-js" class="headerlink" title="1.2 下载 node.js  Download | Node.js"></a>1.2 下载 node.js  <a href="https://link.zhihu.com/?target=https://nodejs.org/en/download/">Download | Node.js</a></h3><h3 id="1-3-GitHub新建仓库"><a href="#1-3-GitHub新建仓库" class="headerlink" title="1.3 GitHub新建仓库"></a>1.3 GitHub新建仓库</h3><p><img src="https://cdn.jsdelivr.net/gh/Afei-Yolo/Picgodemo/img/image-20230225111229485.png" alt="image-20230225111229485"></p><p><img src="https://cdn.jsdelivr.net/gh/Afei-Yolo/Picgodemo/img/image-20230225111549229.png" alt="image-20230225111549229"></p><h3 id="1-4-git与GitHub同步："><a href="#1-4-git与GitHub同步：" class="headerlink" title="1.4 git与GitHub同步："></a>1.4 git与GitHub同步：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure><p>生成ssh密匙文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure><p>然后直接三个回车即可，默认不需要设置密码.<br>然后找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制.<br><img src="https://cdn.jsdelivr.net/gh/Afei-Yolo/Picgodemo/img/image-20230225111928594.png" alt="image-20230225111928594"></p><p>打开<a href="https://link.zhihu.com/?target=https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key.</p><p><img src="https://cdn.jsdelivr.net/gh/Afei-Yolo/Picgodemo/img/image-20230225112228823.png" alt="image-20230225112228823"></p><p><img src="https://cdn.jsdelivr.net/gh/Afei-Yolo/Picgodemo/img/image-20230225112236016.png" alt="image-20230225112236016"></p><p><img src="https://cdn.jsdelivr.net/gh/Afei-Yolo/Picgodemo/img/image-20230225112247009.png" alt="image-20230225112247009"><br>在Git Bash中检测GitHub公钥设置是否成功，输入 <code>ssh git@github.com</code>.</p><p><img src="C:\Users\25442\AppData\Roaming\Typora\typora-user-images\image-20230225112751636.png" alt="image-20230225112751636"></p><h3 id="1-5-安装hexo"><a href="#1-5-安装hexo" class="headerlink" title="1.5 安装hexo"></a>1.5 安装hexo</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli </span><br></pre></td></tr></table></figure><p>找到博客目录，进入右键<code>git bash here</code>,输入：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure><p>(这里的命令是作用在刚刚创建的Blog文件夹中)<br>到此，博客基本框架建立完毕。<br>查看本地服务器上的博客：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g    ----生成静态网页</span><br><span class="line">hexo s    ----本地服务器开启</span><br></pre></td></tr></table></figure><h2 id="2-hexo与GitHub关联"><a href="#2-hexo与GitHub关联" class="headerlink" title="2. hexo与GitHub关联"></a>2. hexo与GitHub关联</h2><p>打开博客目录下的<code>_config.yml</code>配置文件，修改&#x2F;添加：</p><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: https://github.com/(github用户名)/(github用户名).github.io.git</span><br><span class="line">branch: main</span><br></pre></td></tr></table></figure><h2 id="3-部署到github仓库"><a href="#3-部署到github仓库" class="headerlink" title="3 部署到github仓库"></a>3 部署到github仓库</h2><h3 id="3-1-安装git部署插件"><a href="#3-1-安装git部署插件" class="headerlink" title="3.1 安装git部署插件"></a>3.1 安装git部署插件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><h3 id="3-2-部署"><a href="#3-2-部署" class="headerlink" title="3.2 部署"></a>3.2 部署</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  -----清除缓存文件</span><br><span class="line">hexo d   ----- 生成静态文件并上传博客到GitHub仓库</span><br></pre></td></tr></table></figure><h3 id="3-3-查看博客"><a href="#3-3-查看博客" class="headerlink" title="3.3 查看博客"></a>3.3 查看博客</h3><p>网址：<a href="https://(github用户名).github.io/">Hexo (用户名.github.io)</a></p>]]></content>
       
       
       <categories>
           
-          <category> hexo创建博客 </category>
+          <category> github+hexo部署博客 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> BLOG </tag>
+            <tag> Blog </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>代码演示</title>
-      <link href="/2023/02/23/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%BC%94%E7%A4%BA/test1/"/>
-      <url>/2023/02/23/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%BC%94%E7%A4%BA/test1/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">a</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello,world!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>如何在hexo上创建一篇文章</title>
-      <link href="/2023/02/22/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-      <url>/2023/02/22/%E5%A6%82%E4%BD%95%E5%9C%A8hexo%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-      
-        <content type="html"><![CDATA[<p>第一篇文章</p><p>第一篇文章</p><p>第一篇文章</p><p>第一篇文章</p><p>第一篇文章</p><p>第一篇文章</p><p>第一篇文章</p><p>第一篇文章</p><p>第一篇文章</p>]]></content>
-      
-      
       
     </entry>
     
@@ -105,17 +79,6 @@
     
     <entry>
       <title></title>
-      <link href="/js/fps.js"/>
-      <url>/js/fps.js</url>
-      
-        <content type="html"><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {    var rAF = function () {        return (            window.requestAnimationFrame ||            window.webkitRequestAnimationFrame ||            function (callback) {                window.setTimeout(callback, 1000 / 60);            }        );    }();    var frame = 0;    var allFrameCount = 0;    var lastTime = Date.now();    var lastFameTime = Date.now();    var loop = function () {        var now = Date.now();        var fs = (now - lastFameTime);        var fps = Math.round(1000 / fs);        lastFameTime = now;        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS        allFrameCount++;        frame++;        if (now > 1000 + lastTime) {            var fps = Math.round((frame * 1000) / (now - lastTime));            if (fps <= 5) {                var kd = `<span style="color:#bd0000">卡成ppt🤢</span>`            } else if (fps <= 15) {                var kd = `<span style="color:red">电竞级帧率😖</span>`            } else if (fps <= 25) {                var kd = `<span style="color:orange">有点难受😨</span>`            } else if (fps < 35) {                var kd = `<span style="color:#9338e6">不太流畅🙄</span>`            } else if (fps <= 45) {                var kd = `<span style="color:#08b7e4">还不错哦😁</span>`            } else {                var kd = `<span style="color:#39c5bb">十分流畅🤣</span>`            }            document.getElementById("fps").innerHTML = `FPS:${fps} ${kd}`;            frame = 0;            lastTime = now;        };        rAF(loop);    }    loop();} else {    document.getElementById("fps").style = "display:none!important"}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/js/universe.js"/>
       <url>/js/universe.js</url>
       
@@ -126,11 +89,11 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title></title>
+      <link href="/js/fps.js"/>
+      <url>/js/fps.js</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {    var rAF = function () {        return (            window.requestAnimationFrame ||            window.webkitRequestAnimationFrame ||            function (callback) {                window.setTimeout(callback, 1000 / 60);            }        );    }();    var frame = 0;    var allFrameCount = 0;    var lastTime = Date.now();    var lastFameTime = Date.now();    var loop = function () {        var now = Date.now();        var fs = (now - lastFameTime);        var fps = Math.round(1000 / fs);        lastFameTime = now;        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS        allFrameCount++;        frame++;        if (now > 1000 + lastTime) {            var fps = Math.round((frame * 1000) / (now - lastTime));            if (fps <= 5) {                var kd = `<span style="color:#bd0000">卡成ppt🤢</span>`            } else if (fps <= 15) {                var kd = `<span style="color:red">电竞级帧率😖</span>`            } else if (fps <= 25) {                var kd = `<span style="color:orange">有点难受😨</span>`            } else if (fps < 35) {                var kd = `<span style="color:#9338e6">不太流畅🙄</span>`            } else if (fps <= 45) {                var kd = `<span style="color:#08b7e4">还不错哦😁</span>`            } else {                var kd = `<span style="color:#39c5bb">十分流畅🤣</span>`            }            document.getElementById("fps").innerHTML = `FPS:${fps} ${kd}`;            frame = 0;            lastTime = now;        };        rAF(loop);    }    loop();} else {    document.getElementById("fps").style = "display:none!important"}]]></content>
       
     </entry>
     
@@ -140,6 +103,17 @@
       <title>link</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       

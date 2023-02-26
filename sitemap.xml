@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://afei-yolo.github.io/2023/02/26/Git%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2023-02-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://afei-yolo.github.io/2023/02/25/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2023-02-26</lastmod>
@@ -63,6 +72,13 @@
   </url>
   
 
+  
+  <url>
+    <loc>https://afei-yolo.github.io/categories/Git/</loc>
+    <lastmod>2023-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://afei-yolo.github.io/categories/github-hexo%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</loc>

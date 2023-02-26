@@ -1,3 +1,4 @@
+https://afei-yolo.github.io/2023/02/26/Git%E4%BD%BF%E7%94%A8/
 https://afei-yolo.github.io/2023/02/25/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/
 https://afei-yolo.github.io/categories/index.html
 https://afei-yolo.github.io/tags/index.html
@@ -5,4 +6,5 @@ https://afei-yolo.github.io/2023/02/22/hello-world/
 https://afei-yolo.github.io/link/index.html
 https://afei-yolo.github.io/
 https://afei-yolo.github.io/tags/Blog/
+https://afei-yolo.github.io/categories/Git/
 https://afei-yolo.github.io/categories/github-hexo%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/

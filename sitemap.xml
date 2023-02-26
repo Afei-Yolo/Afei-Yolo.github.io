@@ -49,7 +49,7 @@
 
   <url>
     <loc>https://afei-yolo.github.io/</loc>
-    <lastmod>2023-02-25</lastmod>
+    <lastmod>2023-02-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -57,7 +57,7 @@
   
   <url>
     <loc>https://afei-yolo.github.io/tags/Blog/</loc>
-    <lastmod>2023-02-25</lastmod>
+    <lastmod>2023-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -66,7 +66,7 @@
   
   <url>
     <loc>https://afei-yolo.github.io/categories/github-hexo%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2023-02-25</lastmod>
+    <lastmod>2023-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
